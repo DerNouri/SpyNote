@@ -1,0 +1,70 @@
+
+ _______ _______ ___   _ _______ _______ _______ ___       
+|   _   |       |   | | |       |       |       |   |      
+|  |_|  |    _  |   |_| |_     _|   _   |   _   |   |      
+|       |   |_| |      _| |   | |  | |  |  | |  |   |      
+|       |    ___|     |_  |   | |  |_|  |  |_|  |   |___   
+|   _   |   |   |    _  | |   | |       |       |       |  
+|__| |__|___|   |___| |_| |___| |_______|_______|_______|  
+   
+                                                               
+Microsoft Windows [Version 10.0.19044.1387]
+(c) Microsoft Corporation. All rights reserved.
+C:\Users\T-Info\Desktop\SpyNote_v6.4 (2)\SpyNote_v6.4>java -version
+java version "1.8.0_311"
+Java(TM) SE Runtime Environment (build 1.8.0_311-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.311-b11, mixed mode)
+C:\Users\T-Info\Desktop\SpyNote_v6.4 (2)\SpyNote_v6.4>cd C:\Building-6.1\apktool
+C:\Building-6.1\apktool>apktool d app-release.apk
+I: Using Apktool 2.3.3 on app-release.apk
+I: Loading resource table...
+I: Decoding AndroidManifest.xml with resources...
+I: Loading resource table from file: C:\Users\T-Info\AppData\Local\apktool\framework\1.apk
+I: Regular manifest package...
+I: Decoding file-resources...
+W: Cant find 9patch chunk in file: "drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-mdpi-v4/notification_bg_low_pressed.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-hdpi-v4/notification_bg_normal.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xhdpi-v4/notification_bg_normal.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-mdpi-v4/notification_bg_normal.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-hdpi-v4/notification_bg_low_pressed.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xhdpi-v4/notification_bg_low_normal.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-mdpi-v4/notification_bg_normal_pressed.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-hdpi-v4/notification_bg_normal_pressed.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-hdpi-v4/notification_bg_low_normal.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xhdpi-v4/notification_bg_low_pressed.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-xhdpi-v4/notification_bg_normal_pressed.9.png". Renaming it to *.png.
+W: Cant find 9patch chunk in file: "drawable-mdpi-v4/notification_bg_low_normal.9.png". Renaming it to *.png.
+I: Decoding values */* XMLs...
+I: Baksmaling classes.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+C:\Building-6.1\apktool>apktool b -f -r app-release
+I: Using Apktool 2.3.3
+I: Smaling smali folder into classes.dex...
+I: Building resources...
+W: fakeLogOpen(/dev/log_crash, O_WRONLY) failed
+W: fakeLogOpen(/dev/log_crash, O_WRONLY) failed
+W: fakeLogOpen(/dev/log_security, O_WRONLY) failed
+W: fakeLogOpen(/dev/log_security, O_WRONLY) failed
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk...
+C:\Building-6.1\apktool>cd C:\Program Files\Java\jdk-13.0.2\bin
+C:\Program Files\Java\jdk-13.0.2\bin>java -jar C:\Building-6.1\apktool\SignApk.jar C:\Building-6.1\apktool\certificate.pem C:\Building-6.1\apktool\key.pk8 C:\Building-6.1\apktool\app-release\dist\app-release.apk C:\Building-6.1\apktool\out\client.apk
+Exception in thread "main" java.lang.NoClassDefFoundError: sun/misc/BASE64Encoder
+	at com.android.signapk.SignApk.addDigestsToManifest(SignApk.java:169)
+	at com.android.signapk.SignApk.main(SignApk.java:325)
+Caused by: java.lang.ClassNotFoundException: sun.misc.BASE64Encoder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 2 more
